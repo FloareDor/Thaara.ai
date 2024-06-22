@@ -44,11 +44,12 @@ const ImageSlider: React.FC<Props> = ({ beforeImgSrc, afterImgSrc }) => {
   return (
 	  <div className="relative w-full h-[400px] overflow-hidden">
 		  
-		  <Image src={afterImgSrc} alt="Before" className="w-full h-full object-cover absolute" />
+		  <Image src={afterImgSrc} alt="Before" width={680} height={400} className="w-full h-full object-cover absolute" />
 		  <Image
         src={beforeImgSrc}
         alt="After"
-        className="w-full h-full object-cover absolute"
+		className="w-full h-full object-cover absolute"
+		width={680} height={400} 
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       />
       <div 
